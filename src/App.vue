@@ -20,11 +20,11 @@ body {
   font-family: Verdana, sans-serif;
 }
 h1 {
-  position: fixed;
+  position: relative;
   top: 7vh;
   left: 50vw;
   transform: translate(-50%, -50%);
-  font-size: 3em;
+  font-size: 2.5em;
   background: -webkit-linear-gradient(#35495e, #41b883);
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -35,5 +35,17 @@ h1 small {
   font-size: 0.4em;
   display: block;
   cursor: pointer;
+}
+@media (max-width: 320px) {
+  h1,
+  h1 small {
+    font-size: 1em;
+  }
+}
+@media (max-width: 761px) {
+  h1,
+  h1 small {
+    font-size: 1.5em;
+  }
 }
 </style>

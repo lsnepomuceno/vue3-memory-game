@@ -98,4 +98,24 @@ ul {
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
+
+@media (min-width: 320px) and (max-width: 489px) {
+  ul {
+    grid-template-columns: repeat(2, 10em);
+  }
+}
+
+@media (min-width: 490px) and (max-width: 761px) {
+  ul {
+    grid-template-columns: repeat(3, 10em);
+  }
+}
+
+@media (max-width: 761px) {
+  ul {
+    top: 52vh;
+    max-height: 75vh;
+    overflow-y: auto;
+  }
+}
 </style>
