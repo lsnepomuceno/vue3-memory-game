@@ -1,27 +1,39 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <h1 v-if="countFounded === itens.length">
+    Congratulations!
+    <small @click="generateRandomItems">Restart</small>
+  </h1>
+  <h1 v-else>Lucas Nepomuceno - Vue 3 Memory Game</h1>
+  <CardItem @selected="process" @itensLoaded="registerCurrentItens" />
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
-import HelloWorld from './components/HelloWorld.vue'
+<script setup>
+import CardItem from '@/components/CardItems.vue'
+import useCardItems from '@/composables/useCardItems'
 
-export default defineComponent({
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-})
+const { itens, countFounded, generateRandomItems, process } = useCardItems
+
 </script>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+<style>
+body {
+  font-family: Verdana, sans-serif;
+}
+h1 {
+  position: fixed;
+  top: 7vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  font-size: 3em;
+  background: -webkit-linear-gradient(#35495e, #41b883);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  transition: 0.3s;
+}
+h1 small {
+  font-size: 0.4em;
+  display: block;
+  cursor: pointer;
 }
 </style>
