@@ -32,12 +32,10 @@
 import { defineEmits } from 'vue'
 import useCardItems from '@/composables/useCardItems'
 
-const emit = defineEmits(['selected', 'itensLoaded'])
+const emit = defineEmits(['selected'])
 const { itens, generateRandomItems } = useCardItems
 
 generateRandomItems()
-
-emit('itensLoaded', itens)
 
 const selectCardItem = (item) => {
   if (item.wasFound) return

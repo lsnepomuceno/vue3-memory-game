@@ -4,7 +4,7 @@
     <small @click="generateRandomItems">Restart</small>
   </h1>
   <h1 v-else>Lucas Nepomuceno - Vue 3 Memory Game</h1>
-  <CardItem @selected="process" @itensLoaded="registerCurrentItens" />
+  <CardItem @selected="process" />
 </template>
 
 <script setup>
