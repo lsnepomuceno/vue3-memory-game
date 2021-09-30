@@ -9,6 +9,8 @@
 :x: no Vuex
   
 :x: no Dependencies
+  
+[DEMO](https://lsnepomuceno.github.io/vue3-memory-game/)  
 
 ## Project setup
 ```
