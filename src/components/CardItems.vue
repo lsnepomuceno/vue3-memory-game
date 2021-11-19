@@ -38,7 +38,7 @@ const { itens, generateRandomItems } = useCardItems
 generateRandomItems()
 
 const selectCardItem = (item) => {
-  if (item.wasFound) return
+  if (item.wasFound || item.isFlipped) return
   item.isFlipped = !item.isFlipped
   emit('selected', item)
 }
